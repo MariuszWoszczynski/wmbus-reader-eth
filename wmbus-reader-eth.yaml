@@ -41,7 +41,9 @@ api:
 ota:
   - platform: esphome
 
-
+mdns:
+  disabled: false
+  
 web_server: 
   port: 80
 
