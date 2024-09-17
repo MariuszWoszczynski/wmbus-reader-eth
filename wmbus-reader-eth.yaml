@@ -60,7 +60,6 @@ ethernet:
 #    gateway: 192.168.10.1
 #    subnet: 255.255.255.0
 
-
 wmbus:             
   mosi_pin: GPIO15
   clk_pin:  GPIO12
