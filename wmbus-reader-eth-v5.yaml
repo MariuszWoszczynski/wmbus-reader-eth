@@ -89,7 +89,6 @@ wmbus_radio:
 ##############################################################################################################################################################################
 ##############################################################################################################################################################################
 # The following sensors are examples, for IZAR, APATOR, UNISMART, Heat and Electricity meters. Leave only the configuration of such meters you have, delete the other sensors. 
-# If you have another meter, check its configuration on:  https://github.com/SzczepanLeon/esphome-components
 ##############################################################################################################################################################################
 ##############################################################################################################################################################################
 
@@ -110,9 +109,6 @@ wmbus_meter:
     meter_id: 0x00000000  ######## enter your ELECTRICITY meter ID here ###########
     type: amiplus
     key: "01012132131465465432131313151531"  ######## enter your key here ###########
-    mode: 
-      - T1
-      - C1
   - id: heat_meter
     meter_id: 0x00000000  ######## enter your HEAT meter ID here ###########
     type: hydrocalm3
