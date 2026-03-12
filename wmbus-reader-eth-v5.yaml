@@ -60,10 +60,13 @@ ethernet:
   mdc_pin: GPIO23
   mdio_pin: GPIO18
   clk:
-    pin: GPIO0
+    pin:
+      number: GPIO0
+      ignore_strapping_warning: true
     mode: CLK_EXT_IN
   phy_addr: 1
   power_pin: GPIO16
+
   #Optional manual IP
 #  manual_ip:
 #    static_ip: 192.168.10.220
@@ -71,20 +74,26 @@ ethernet:
 #    subnet: 255.255.255.0
 
 spi:
-  clk_pin:  GPIO12
-  mosi_pin: GPIO15
+  clk_pin:
+    number: GPIO12
+    ignore_strapping_warning: true
+  mosi_pin:
+    number: GPIO15
+    ignore_strapping_warning: true
   miso_pin: GPIO04
 
 wmbus_radio:
   radio_type: SX1276
-  cs_pin:   GPIO02  
+  cs_pin:
+    number: GPIO02
+    ignore_strapping_warning: true
   reset_pin: GPIO14
   irq_pin: GPIO35
   on_frame:
     - then:
-      - logger.log:
-          format: "RSSI: %ddBm T: %s (%d)"
-          args: [ frame->rssi(), frame->as_hex().c_str(), frame->data().size() ]
+        - logger.log:
+            format: "RSSI: %ddBm T: %s (%d)"
+            args: [ frame->rssi(), frame->as_hex().c_str(), frame->data().size() ]
           
 ##############################################################################################################################################################################
 ##############################################################################################################################################################################
