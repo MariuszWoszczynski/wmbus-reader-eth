@@ -132,7 +132,8 @@ sensor:
     field: rssi_dbm
     name: Izar water meter - RSSI
     unit_of_measurement: "dBm"
-
+    state_class: measurement
+    
   - platform: wmbus_meter
     parent_id: water_meter_apator #Water meter Apator
     field: total_m3
@@ -146,7 +147,8 @@ sensor:
     field: rssi_dbm
     name: Apator water meter - RSSI
     unit_of_measurement: "dBm"
-
+    state_class: measurement
+    
   - platform: wmbus_meter
     parent_id: gas_meter_unismart #Water meter Unismart
     field: total_m3
@@ -160,7 +162,8 @@ sensor:
     field: rssi_dbm
     name: RSSI licznika gazu Unismart V5
     unit_of_measurement: "dBm"
-
+    state_class: measurement
+    
   - platform: wmbus_meter #Heat meter
     parent_id: heat_meter
     field: total_heating_kwh
@@ -172,7 +175,8 @@ sensor:
     parent_id: heat_meter
     field: rssi_dbm
     name: Heat Meter - RSSI
-
+    state_class: measurement
+    
   - platform: wmbus_meter #Electicity meter
     parent_id: electricity_meter
     field: current_power_consumption_kw
@@ -194,7 +198,8 @@ sensor:
     parent_id: electricity_meter
     field: rssi_dbm
     name: Electricity Meter RSSI
+    state_class: measurement
 
 #######################################################################################
 
-# More info on https://github.com/SzczepanLeon/esphome-components and https://github.com/IoTLabs-pl/esphome-components
+# More info on https://github.com/SzczepanLeon/esphome-components adn https://github.com/IoTLabs-pl/esphome-components
